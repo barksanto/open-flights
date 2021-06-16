@@ -1,6 +1,7 @@
 class Airline < ApplicationRecord
   has_many :reviews
 
+  # set the slug for our airline before its created in our db.
   before_create :slugify
 
   def slugify
